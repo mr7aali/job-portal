@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './LogIN_LogOut.css';
+import { BsFacebook, BsGoogle, BsLinkedin, BsTwitter } from 'react-icons/bs';
+
+
+
 
 const LogINLogOut = () => {
     const [showSingUp, setShowSingUp] = useState(false);
@@ -9,7 +13,6 @@ const LogINLogOut = () => {
 
     return (
         <div>
-            {/* container sign-up-mode */}
             <div className={`container ${showSingUp ? "sign-up-mode" : ' '}`}>
                 <div className="forms-container">
                     <div className="signin-signup">
@@ -26,17 +29,18 @@ const LogINLogOut = () => {
                             <input type="submit" value="Login" className="btn solid" />
                             <p className="social-text">Or Sign in with social platforms</p>
                             <div className="social-media">
-                                <a href=" " className="social-icon">
-                                    <i className="fab fa-facebook-f"></i>
+                                <a href=" " className="social-icon">                                   
+                                    <BsFacebook/>
                                 </a>
                                 <a href=" " className="social-icon">
-                                    <i className="fab fa-twitter"></i>
+                                    <BsTwitter/>      
                                 </a>
                                 <a href=" " className="social-icon">
-                                    <i className="fab fa-google"></i>
+                                    <BsGoogle/>
                                 </a>
                                 <a href="  " className="social-icon">
-                                    <i className="fab fa-linkedin-in"></i>
+                                   
+                                    <BsLinkedin/>
                                 </a>
                             </div>
                         </form>
@@ -58,16 +62,20 @@ const LogINLogOut = () => {
                             <p className="social-text">Or Sign up with social platforms</p>
                             <div className="social-media">
                                 <a href=" " className="social-icon">
-                                    <i className="fab fa-facebook-f"></i>
+                                    
+                                    <BsFacebook/>
                                 </a>
                                 <a href=" " className="social-icon">
-                                    <i className="fab fa-twitter"></i>
+                                   
+                                    <BsLinkedin/>
                                 </a>
                                 <a href=" " className="social-icon">
-                                    <i className="fab fa-google"></i>
+                                   
+                                    <BsGoogle/>
                                 </a>
                                 <a href=" " className="social-icon">
-                                    <i className="fab fa-linkedin-in"></i>
+                                    
+                                    <BsTwitter/>
                                 </a>
                             </div>
                         </form>
