@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './LogIN_LogOut.css';
-import { BsFacebook, BsGoogle, BsLinkedin, BsTwitter } from 'react-icons/bs';
-
+import { BsFacebook, BsGoogle, BsLinkedin, BsLock, BsTwitter } from 'react-icons/bs';
+import {AiOutlineUser} from 'react-icons/ai'
 
 
 
 const LogINLogOut = () => {
+    
     const [showSingUp, setShowSingUp] = useState(false);
-
 
     console.log(showSingUp);
 
@@ -19,11 +19,13 @@ const LogINLogOut = () => {
                         <form action="#" className="sign-in-form">
                             <h2 className="title">Sign in</h2>
                             <div className="input-field">
-                                <i className="fas fa-user"></i>
+                                {/* <i className="fas fa-user"></i> */}
+                                <AiOutlineUser className='icon'/>
                                 <input type="text" placeholder="Username" />
                             </div>
                             <div className="input-field">
-                                <i className="fas fa-lock"></i>
+                                {/* <i className="fas fa-lock"></i> */}
+                                <BsLock className='icon'/>
                                 <input type="password" placeholder="Password" />
                             </div>
                             <input type="submit" value="Login" className="btn solid" />
@@ -48,15 +50,15 @@ const LogINLogOut = () => {
                             <h2 className="title">Sign up</h2>
                             <div className="input-field">
                                 <i className="fas fa-user"></i>
-                                <input type="text" placeholder="Username" />
+                                <input type="text" placeholder="Username" required/>
                             </div>
                             <div className="input-field">
                                 <i className="fas fa-envelope"></i>
-                                <input type="email" placeholder="Email" />
+                                <input type="email" placeholder="Email"  required/>
                             </div>
                             <div className="input-field">
                                 <i className="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" />
+                                <input type="password" placeholder="Password"  required/>
                             </div>
                             <input type="submit" className="btn" value="Sign up" />
                             <p className="social-text">Or Sign up with social platforms</p>

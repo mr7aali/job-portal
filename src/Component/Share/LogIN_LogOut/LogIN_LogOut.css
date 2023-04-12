@@ -79,8 +79,15 @@ form.sign-in-form {
   position: relative;
 }
 
-.input-field i {
-  text-align: center;
+.input-field .icon {
+  /* text-align: center; */
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+
+
+  border-right: 2px solid #acacac;
   line-height: 55px;
   color: #acacac;
   transition: 0.5s;
@@ -95,16 +102,20 @@ form.sign-in-form {
   font-weight: 600;
   font-size: 1.1rem;
   color: #333;
+  padding-left: 15px;
 }
 
 .input-field input::placeholder {
   color: #aaa;
   font-weight: 500;
+  padding-left: 5px;
+  
 }
 
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
+
 }
 
 .social-media {
@@ -150,6 +161,7 @@ form.sign-in-form {
 .btn:hover {
   background-color: #4d84e2;
 }
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -275,6 +287,7 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
+
   .signin-signup {
     width: 100%;
     top: 95%;
@@ -381,9 +394,11 @@ form.sign-in-form {
   .image {
     display: none;
   }
+
   .panel .content {
     padding: 0.5rem 1rem;
   }
+
   .container {
     padding: 1.5rem;
   }
