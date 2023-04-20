@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -22,7 +23,8 @@ const navItems = ['Home', 'About', 'Contact'];
 export default function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const email = useSelector(state => state.auth.email);
+  console.log(email)
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -69,23 +71,30 @@ export default function Header(props) {
             MUI
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            
-              <Link to='/'>
-                <Button  sx={{ color: '#fff' }}>
-                  Home
-                </Button>
-              </Link>
-              <Link to='/'>
-                <Button  sx={{ color: '#fff' }}>
-                  Login
-                </Button>
-              </Link>
-              <Link to='/'>
-                <Button  sx={{ color: '#fff' }}>
-                  Log Out
-                </Button>
-              </Link>
-            
+
+            <Link to='/'>
+              <Button sx={{ color: '#fff' }}>
+                Home
+              </Button>
+            </Link>
+            {
+              email ?
+                <Link to='/'>
+                  <Button sx={{ color: '#fff' }}>
+                    Log Out
+                  </Button>
+                </Link>
+                :
+                <Link to='/login'>
+                  <Button sx={{ color: '#fff' }}>
+                    Login
+                  </Button>
+                </Link>
+            }
+
+
+
+
           </Box>
         </Toolbar>
       </AppBar>
